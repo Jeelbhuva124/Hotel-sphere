@@ -55,7 +55,7 @@ $images = mysqli_query($conn,"SELECT * FROM room_images WHERE room_id='$room_id'
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/feather-icons"></script>
 <style>body{font-family:'Segoe UI';}</style>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100 p-6">
 

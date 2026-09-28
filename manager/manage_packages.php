@@ -72,7 +72,7 @@ WHERE r.hotel_id='$hotel_id'
 <title>Manage Packages</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/feather-icons"></script>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100 min-h-screen flex font-sans">
 

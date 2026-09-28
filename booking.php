@@ -61,7 +61,7 @@ if (isset($_POST['book'])) {
 <meta charset="UTF-8">
 <title>Booking - <?= $h['hotel_name'] ?></title>
 <script src="https://cdn.tailwindcss.com"></script>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 
 <body class="bg-white min-h-screen flex justify-center items-center p-4">

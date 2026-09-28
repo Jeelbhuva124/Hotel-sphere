@@ -99,7 +99,7 @@ $total_revenue = mysqli_fetch_assoc(mysqli_query($conn,"SELECT SUM(price) as tot
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/feather-icons"></script>
 <style>body{font-family:'Segoe UI';}</style>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="flex min-h-screen bg-gray-100">
 

@@ -50,7 +50,7 @@ if(isset($_POST['update_manager'])){
 <meta charset="UTF-8">
 <title>Edit Manager</title>
 <script src="https://cdn.tailwindcss.com"></script>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100 min-h-screen">
 <div class="max-w-3xl mx-auto p-6">

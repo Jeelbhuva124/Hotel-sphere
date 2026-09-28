@@ -63,7 +63,7 @@ if($pay_check && mysqli_num_rows($pay_check) > 0 && strtolower($row['status']) !
 <title>My Bookings</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://unpkg.com/feather-icons"></script>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
 

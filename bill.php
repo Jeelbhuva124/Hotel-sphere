@@ -38,7 +38,7 @@ h2{text-align:center;}
 button{padding:10px 20px;background:#0071c2;color:white;border:none;border-radius:5px;}
 </style>
 
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 
 <body>

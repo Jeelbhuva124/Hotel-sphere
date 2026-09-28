@@ -32,7 +32,7 @@ body { font-family: 'Segoe UI', sans-serif; }
  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 </style>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100 flex min-h-screen">
 

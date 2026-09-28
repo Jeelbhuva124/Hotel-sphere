@@ -20,7 +20,7 @@ die("SQL Error: ".$conn->error);
 <head>
 <title>Confirmed Bookings</title>
 <script src="https://cdn.tailwindcss.com"></script>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 
 <body class="w-64 min-h-screen">

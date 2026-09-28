@@ -91,7 +91,7 @@ if(isset($_POST['submit_review'])){
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
 <?php include("navbar.php"); ?>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 
 <body class="bg-white-100">

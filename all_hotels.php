@@ -12,7 +12,7 @@ $current_city = "";
 <head>
  <title>All Hotels</title>
  <script src="https://cdn.tailwindcss.com"></script>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100">
 

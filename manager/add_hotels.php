@@ -41,7 +41,7 @@ header("Location: manage_hotels.php");
 <title>Add Hotel</title>
 <script src="https://cdn.tailwindcss.com"></script>
 
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 
 <body class="bg-gray-100 p-6">

@@ -86,7 +86,7 @@ background:#005999;
 
 </style>
 
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 
 <body>

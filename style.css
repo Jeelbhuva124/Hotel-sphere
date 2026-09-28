@@ -4,20 +4,20 @@
    LIGHT THEME (Default)
    ========================================= */
 :root {
-    --primary-color: #16a34a;
-    --primary-hover: #15803d;
+    --primary-color: #3b82f6;
+    --primary-hover: #2563eb;
     --secondary-color: #3b82f6;
     --bg-color: #f3f4f6;
     --text-color: #1f2937;
     --text-muted: #4b5563;
-    --success-color: #16a34a;
+    --success-color: #3b82f6;
     --error-color: #dc2626;
     
     /* Premium Light Mode Background with Dynamic Glowing Rings */
     --body-bg-image: 
-        radial-gradient(circle at 10% 80%, transparent 15%, rgba(22, 163, 74, 0.25) 20%, rgba(22, 163, 74, 0.1) 25%, transparent 35%),
-        radial-gradient(circle at 85% 20%, transparent 20%, rgba(22, 163, 74, 0.2) 25%, rgba(22, 163, 74, 0.08) 30%, transparent 45%),
-        radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(22, 163, 74, 0.1) 35%, transparent 45%);
+        radial-gradient(circle at 10% 80%, transparent 15%, rgba(59, 130, 246, 0.25) 20%, rgba(59, 130, 246, 0.1) 25%, transparent 35%),
+        radial-gradient(circle at 85% 20%, transparent 20%, rgba(59, 130, 246, 0.2) 25%, rgba(59, 130, 246, 0.08) 30%, transparent 45%),
+        radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(59, 130, 246, 0.1) 35%, transparent 45%);
     
     /* Premium Light Glassmorphism */
     --glass-bg: rgba(255, 255, 255, 0.45);
@@ -27,8 +27,8 @@
     --glass-text: #1f2937;
     
     /* True Glassmorphic Buttons in Light Mode */
-    --btn-glass-bg: rgba(22, 163, 74, 0.35); /* Perfect semi-transparent green */
-    --btn-glass-border: rgba(22, 163, 74, 0.4);
+    --btn-glass-bg: rgba(59, 130, 246, 0.35); /* Perfect semi-transparent green */
+    --btn-glass-border: rgba(59, 130, 246, 0.4);
     --btn-glass-border-light: rgba(255, 255, 255, 0.6);
     --btn-glass-text: #ffffff; /* White text looks cleaner on this opacity */
     
@@ -40,19 +40,19 @@
    DARK THEME (Neon Glass)
    ========================================= */
 [data-theme="dark"] {
-    --primary-color: #3bf366;
-    --primary-hover: #32d659;
-    --secondary-color: #16a34a;
+    --primary-color: #60a5fa;
+    --primary-hover: #3b82f6;
+    --secondary-color: #3b82f6;
     --bg-color: #000000;
     --text-color: #ffffff;
     --text-muted: #d1d5db;
-    --success-color: #3bf366;
+    --success-color: #60a5fa;
     --error-color: #ff4c4c;
     
     --body-bg-image: 
-        radial-gradient(circle at 10% 80%, transparent 15%, rgba(59, 243, 102, 0.4) 20%, rgba(59, 243, 102, 0.1) 25%, transparent 35%),
-        radial-gradient(circle at 85% 20%, transparent 20%, rgba(59, 243, 102, 0.3) 25%, rgba(59, 243, 102, 0.1) 30%, transparent 45%),
-        radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(59, 243, 102, 0.1) 35%, transparent 45%);
+        radial-gradient(circle at 10% 80%, transparent 15%, rgba(96, 165, 250, 0.4) 20%, rgba(96, 165, 250, 0.1) 25%, transparent 35%),
+        radial-gradient(circle at 85% 20%, transparent 20%, rgba(96, 165, 250, 0.3) 25%, rgba(96, 165, 250, 0.1) 30%, transparent 45%),
+        radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(96, 165, 250, 0.1) 35%, transparent 45%);
         
     --glass-bg: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.4));
     --glass-border: rgba(255, 255, 255, 0.05);
@@ -61,9 +61,9 @@
     --glass-text: #f3f4f6;
     
     --btn-glass-bg: rgba(255, 255, 255, 0.05); /* Proper dark frosted glass */
-    --btn-glass-border: rgba(59, 243, 102, 0.3); /* Neon green border */
-    --btn-glass-border-light: rgba(59, 243, 102, 0.6); /* Brighter neon top edge */
-    --btn-glass-text: #3bf366; /* Neon green text */
+    --btn-glass-border: rgba(96, 165, 250, 0.3); /* Neon green border */
+    --btn-glass-border-light: rgba(96, 165, 250, 0.6); /* Brighter neon top edge */
+    --btn-glass-text: #60a5fa; /* Neon green text */
     
     --input-bg: rgba(0, 0, 0, 0.5);
     --input-border: rgba(255, 255, 255, 0.15);
@@ -217,7 +217,7 @@ a[class*="bg-gray-"]:hover,
 a[class*="bg-purple-"]:hover,
 a[class*="bg-red-"]:hover {
     transform: translateY(-2px) !important;
-    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4) !important;
+    box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4) !important;
     border: 1px solid var(--btn-glass-border-light) !important;
 }
 
@@ -231,8 +231,8 @@ a[class*="bg-red-"]:hover {
 [data-theme="dark"] a[class*="bg-gray-"]:hover,
 [data-theme="dark"] a[class*="bg-purple-"]:hover,
 [data-theme="dark"] a[class*="bg-red-"]:hover {
-    box-shadow: 0 8px 25px rgba(59, 243, 102, 0.25) !important; /* Neon glow on hover */
-    background: rgba(59, 243, 102, 0.1) !important; /* Slight neon tint on hover */
+    box-shadow: 0 8px 25px rgba(96, 165, 250, 0.25) !important; /* Neon glow on hover */
+    background: rgba(96, 165, 250, 0.1) !important; /* Slight neon tint on hover */
 }
 
 /* Subtle shine effect */
@@ -275,61 +275,60 @@ a[class*="bg-red-"]:hover::after {
    CUSTOM THEME TOGGLE SWITCH
    ========================================= */
 .custom-toggle {
-    width: 60px;
-    height: 30px;
-    background: #f1f5f9 !important; /* Light mode track */
-    background-color: #f1f5f9 !important;
-    border: 1px solid #cbd5e1 !important;
-    border-radius: 30px !important;
-    position: relative;
+    width: 64px;
+    height: 32px;
+    background: #e5e7eb !important; /* Light track */
+    border: none !important;
+    border-radius: 32px !important;
+    position: relative !important;
     cursor: pointer;
     display: flex;
     align-items: center;
-    padding: 2px;
+    padding: 4px;
     margin-left: 1rem;
     transition: all 0.3s ease;
     outline: none !important;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05) !important;
-}
-.custom-toggle:hover {
-    background: #e2e8f0 !important;
-    background-color: #e2e8f0 !important;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1) !important;
-    transform: none !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.15) !important;
 }
 
 [data-theme="dark"] .custom-toggle {
-    background: #374151 !important; /* Dark mode track */
-    background-color: #374151 !important;
-    border-color: #4b5563 !important;
-    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2) !important;
-}
-[data-theme="dark"] .custom-toggle:hover {
-    background: #4b5563 !important;
-    background-color: #4b5563 !important;
-    transform: none !important;
+    background: #374151 !important; /* Dark track */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.4) !important;
 }
 
 .toggle-thumb {
     width: 24px;
     height: 24px;
-    background-color: #1e293b; /* Dark circle in Light mode */
+    background-color: #fbbf24 !important; /* Yellow thumb in light mode */
     border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #ffffff; /* White moon */
-    font-size: 11px;
+    position: absolute;
+    left: 4px;
+    z-index: 1; /* Under the SVGs */
     transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1), background-color 0.4s ease;
-    transform: translateX(30px); /* Right side (Moon) by default */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transform: translateX(0); /* On the left */
 }
+
 [data-theme="dark"] .toggle-thumb {
-    background-color: #ffffff; /* White circle in Dark mode */
-    color: #1e293b; /* Dark sun */
-    transform: translateX(0); /* Left side (Sun) in Dark mode */
+    background-color: #4b5563 !important; /* Dark Gray thumb in dark mode */
+    transform: translateX(32px); /* Slide to the right */
 }
-.toggle-thumb i {
-    transition: opacity 0.3s ease;
+
+/* SVG Icon Colors */
+.toggle-sun {
+    color: #ffffff; /* White sun over yellow thumb */
+    transition: color 0.4s ease;
+}
+.toggle-moon {
+    color: #9ca3af; /* Gray moon on empty track */
+    transition: color 0.4s ease;
+}
+
+[data-theme="dark"] .toggle-sun {
+    color: #6b7280; /* Gray sun on empty track */
+}
+[data-theme="dark"] .toggle-moon {
+    color: #ffffff; /* White moon over gray thumb */
 }
 
 /* =========================================
@@ -353,4 +352,40 @@ body:not(.bg-gray-100) .border-focus:focus {
     outline: none !important;
     border-color: var(--primary-color) !important;
     box-shadow: 0 0 0 2px var(--primary-color) !important;
+}
+
+/* =========================================
+   NAVBAR LINKS (Home, Hotels, Contact, etc.)
+   ========================================= */
+.nav-link {
+    color: #1e3a8a; /* Deep blue in light mode */
+    position: relative;
+    padding-bottom: 2px;
+    font-weight: 600;
+}
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #3b82f6; /* Bright blue underline */
+    transition: width 0.3s ease;
+}
+.nav-link:hover::after {
+    width: 100%;
+}
+.nav-link:hover {
+    color: #3b82f6 !important;
+}
+
+[data-theme="dark"] .nav-link {
+    color: #e2e8f0; /* Light gray in dark mode */
+}
+[data-theme="dark"] .nav-link:hover {
+    color: #60a5fa !important; /* Lighter blue in dark mode */
+}
+[data-theme="dark"] .nav-link::after {
+    background-color: #60a5fa;
 }

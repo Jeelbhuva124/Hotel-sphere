@@ -54,7 +54,7 @@ if($status_display === 'confirm' || $status_display === 'confirmed'){
  .no-print { display: none; }
 }
 </style>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100 p-6">
 

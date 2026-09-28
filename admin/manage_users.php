@@ -33,7 +33,7 @@ $current = basename($_SERVER['PHP_SELF']);
   padding:10px;
  }
  </style>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100">
 

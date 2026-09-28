@@ -17,7 +17,7 @@ background-position: center;
 }
 </style>
 
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-50">
 

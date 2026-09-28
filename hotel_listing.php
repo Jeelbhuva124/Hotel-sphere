@@ -26,7 +26,7 @@ while($c = $cityResult->fetch_assoc()){
 .hotelImg{height:200px;width:100%;object-fit:cover;}
 .price{font-size:22px;font-weight:700;}
 </style>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100">
 

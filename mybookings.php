@@ -29,7 +29,7 @@ button{padding:8px;background:blue;color:white;border:none;}
 .pending{color:orange;}
 .approved{color:green;}
 </style>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 
 <body>

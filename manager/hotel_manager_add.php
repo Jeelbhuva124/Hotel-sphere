@@ -48,7 +48,7 @@ if(isset($_POST['add']))
  <title>Add Hotel + Manager</title>
  <script src="https://cdn.tailwindcss.com"></script>
  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100 flex justify-center items-center min-h-screen">
 

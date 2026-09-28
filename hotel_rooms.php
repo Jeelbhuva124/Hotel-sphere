@@ -32,34 +32,54 @@ text-align:center;
 }
 .hero h1{font-size:48px;font-weight:bold;text-shadow:2px 2px 6px rgba(0,0,0,0.7);}
 .main{display:flex;width:95%;margin:auto;gap:20px;flex-wrap:wrap;margin-top:20px;}
-.left{flex:3;min-width:700px;overflow-x:auto;background:white;padding:10px;border-radius:10px;}
+.left{flex:3;min-width:700px;overflow-x:auto;background:white;padding:0;border-radius:10px; transition: all 0.3s; overflow: hidden; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.05);}
 table{width:100%;min-width:900px;border-collapse:collapse;}
-th{background:#4a6fa5;color:white;padding:12px;text-align:center;}
-td{border:1px solid #ddd;padding:12px;text-align:center;vertical-align:middle;}
-.room img{width:130px;height:90px;object-fit:cover;border-radius:6px;cursor:pointer;}
-.room-title{color:#0071c2;font-size:18px;font-weight:bold;}
-.feature{display:inline-block;border:1px solid #ccc;padding:4px 8px;margin:3px;font-size:12px;border-radius:5px;background:#f1f1f1;}
-.feature.red{color:red;border-color:red;background:#ffeaea;}
+th{background:#3b82f6;color:white;padding:12px 20px;text-align:center; font-weight:600; white-space:nowrap;}
+td{border:1px solid #e5e7eb;padding:16px 20px;text-align:center;vertical-align:middle;}
+th:first-child, td:first-child { text-align: left; width: 35%; padding-left: 24px; }
+th:last-child, td:last-child { padding-right: 24px; }
+tr:hover { background: #f9fafb; }
+.room img{width:150px;height:100px;object-fit:cover;border-radius:6px;cursor:pointer; margin-bottom: 10px;}
+.room-title{color:#3b82f6;font-size:20px;font-weight:bold;margin-bottom:8px;}
+.feature{display:inline-block;border:1px solid #d1d5db;padding:4px 8px;margin:3px;font-size:12px;border-radius:6px;background:#f3f4f6; color: #374151;}
+.feature.red{color:#dc2626;border-color:#fca5a5;background:#fef2f2;}
 .price{font-size:18px;font-weight:bold;}
 .available{font-size:14px;font-weight:bold;margin-top:5px;}
-.available.green{color:green;}
-.available.red{color:red;}
+.available.green{color:#16a34a;}
+.available.red{color:#dc2626;}
 .right{flex:1;min-width:250px;}
-.summary{position:sticky;top:100px;background:#eaf3ff;padding:20px;border-radius:10px;}
-.reserve{background:#0071c2;color:white;padding:12px;border:none;width:100%;border-radius:5px;cursor:pointer;}
-.selected-box{background:white;padding:10px;border-radius:8px;margin-bottom:10px;font-size:14px;text-align:left;}
-select.qty, select.guests{padding:4px;border-radius:4px;border:1px solid #ccc;width:60px;}
+.summary{position:sticky;top:100px;background:#eff6ff;padding:20px;border-radius:10px; transition: all 0.3s; color: #1f2937; border: 1px solid #bfdbfe;}
+.reserve{background:#3b82f6;color:white;padding:12px;border:none;width:100%;border-radius:8px;cursor:pointer;font-weight:bold;transition: background 0.3s;}
+.reserve:hover{background:#2563eb;}
+.selected-box{background:white;padding:12px;border-radius:8px;margin-bottom:12px;font-size:14px;text-align:left; color: #374151; border: 1px solid #d1d5db;}
+select.qty, select.guests{padding:6px;border-radius:6px;border:1px solid #d1d5db;width:65px; color: #374151; outline:none;}
+select.qty:focus, select.guests:focus{border-color:#3b82f6;}
 .popup{
 display:none;
 position:fixed;
 top:0;left:0;width:100%;height:100%;
 background:rgba(0,0,0,0.8);
 justify-content:center;align-items:center;
+z-index: 9999;
 }
-.popup img{max-width:90%;max-height:80%;border-radius:10px;}
+.popup img{max-width:90%;max-height:80%;border-radius:10px;box-shadow: 0 10px 25px rgba(0,0,0,0.5);}
 .close{position:absolute;top:20px;right:30px;font-size:40px;color:white;cursor:pointer;}
+
+/* DARK MODE OVERRIDES */
+[data-theme="dark"] .left { background: #1f2937; border: 1px solid #374151; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+[data-theme="dark"] td, [data-theme="dark"] th { border: 1px solid #374151; }
+[data-theme="dark"] th { background: #1e3a8a; color: #ffffff; }
+[data-theme="dark"] tr:hover { background: rgba(255,255,255,0.03); }
+[data-theme="dark"] .room-title { color: #60a5fa; }
+[data-theme="dark"] .feature { background: #374151; color: #f3f4f6; border-color: #4b5563; }
+[data-theme="dark"] .feature.red { background: #7f1d1d; color: #fca5a5; border-color: #991b1b; }
+[data-theme="dark"] .summary { background: #1f2937; border: 1px solid #374151; color: #f3f4f6; box-shadow: 0 4px 6px rgba(0,0,0,0.3); }
+[data-theme="dark"] .selected-box { background: #374151; color: #f3f4f6; border: 1px solid #4b5563; }
+[data-theme="dark"] select.qty, [data-theme="dark"] select.guests { background: #374151; color: #fff; border: 1px solid #4b5563; }
+[data-theme="dark"] .available.green { color: #4ade80; }
+[data-theme="dark"] .available.red { color: #f87171; }
 </style>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body>
 
@@ -86,7 +106,7 @@ justify-content:center;align-items:center;
 $packages = mysqli_query($conn,"SELECT * FROM packages WHERE room_id=".$row['id']);
 $pkgCount = mysqli_num_rows($packages);
 
-$booked_result = mysqli_query($conn,"SELECT SUM(quantity) as booked FROM bookings WHERE room_id=".$row['id']." AND status='confirmed'");
+$booked_result = mysqli_query($conn,"SELECT SUM(br.quantity) as booked FROM booking_rooms br JOIN bookings b ON br.booking_id = b.id WHERE br.room_id=".$row['id']." AND b.status='confirmed'");
 $booked_rooms = 0;
 if($booked_result){
 $booked_rooms = mysqli_fetch_assoc($booked_result)['booked'] ?? 0;

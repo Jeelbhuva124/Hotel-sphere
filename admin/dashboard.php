@@ -85,7 +85,7 @@ $current = basename($_SERVER['PHP_SELF']);
  margin:20px auto;
 }
 </style>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100">
 

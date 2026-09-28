@@ -28,7 +28,7 @@ $feedbacks = mysqli_query($conn, $sql);
 <title>Hotel Feedback</title>
 <script src="https://unpkg.com/feather-icons"></script>
 <script src="https://cdn.tailwindcss.com"></script>
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/Hotel-sphere/style.css">
 </head>
 <body class="bg-gray-100 min-h-screen flex font-sans">
 
