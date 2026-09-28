@@ -15,9 +15,16 @@ $hotel = mysqli_fetch_assoc($hotel_info);
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
 <title><?php echo htmlspecialchars($hotel['hotel_name']); ?> - Rooms</title>
+
 <style>
-body{font-family:Arial;background:#f2f2f2;margin:0;}
+body{font-family:'Roboto', sans-serif; background: var(--bg-color) !important; color: var(--text-color) !important; margin:0;}
 .hero{
 position:relative;
 width:100%;
@@ -32,6 +39,7 @@ text-align:center;
 }
 .hero h1{font-size:48px;font-weight:bold;text-shadow:2px 2px 6px rgba(0,0,0,0.7);}
 .main{display:flex;width:95%;margin:auto;gap:20px;flex-wrap:wrap;margin-top:20px;}
+<<<<<<< HEAD
 .left{flex:3;min-width:700px;overflow-x:auto;background:white;padding:0;border-radius:10px; transition: all 0.3s; overflow: hidden; border: 1px solid #e5e7eb; box-shadow: 0 4px 6px rgba(0,0,0,0.05);}
 table{width:100%;min-width:900px;border-collapse:collapse;}
 th{background:#3b82f6;color:white;padding:12px 20px;text-align:center; font-weight:600; white-space:nowrap;}
@@ -43,17 +51,34 @@ tr:hover { background: #f9fafb; }
 .room-title{color:#3b82f6;font-size:20px;font-weight:bold;margin-bottom:8px;}
 .feature{display:inline-block;border:1px solid #d1d5db;padding:4px 8px;margin:3px;font-size:12px;border-radius:6px;background:#f3f4f6; color: #374151;}
 .feature.red{color:#dc2626;border-color:#fca5a5;background:#fef2f2;}
+=======
+.left{flex:3;min-width:700px;overflow-x:auto;background: var(--card-bg) !important;padding:10px;border-radius:10px;}
+table{width:100%;min-width:900px;border-collapse:collapse;}
+th{background: var(--primary-color) !important;color:white;padding:12px;text-align:center;}
+td{border:1px solid var(--border-color) !important;padding:12px;text-align:center;vertical-align:middle;}
+.room img{width:130px;height:90px;object-fit:cover;border-radius:6px;cursor:pointer;}
+.room-title{color:#0071c2;font-size:18px;font-weight:bold;}
+.feature{display:inline-block;border:1px solid #ccc;padding:4px 8px;margin:3px;font-size:12px;border-radius:5px;background:#f1f1f1;}
+.feature.red{color:red;border-color:red;background:#ffeaea;}
+>>>>>>> dc11e22003aa1e3bff617af62710879c1b6085a5
 .price{font-size:18px;font-weight:bold;}
 .available{font-size:14px;font-weight:bold;margin-top:5px;}
 .available.green{color:#16a34a;}
 .available.red{color:#dc2626;}
 .right{flex:1;min-width:250px;}
+<<<<<<< HEAD
 .summary{position:sticky;top:100px;background:#eff6ff;padding:20px;border-radius:10px; transition: all 0.3s; color: #1f2937; border: 1px solid #bfdbfe;}
 .reserve{background:#3b82f6;color:white;padding:12px;border:none;width:100%;border-radius:8px;cursor:pointer;font-weight:bold;transition: background 0.3s;}
 .reserve:hover{background:#2563eb;}
 .selected-box{background:white;padding:12px;border-radius:8px;margin-bottom:12px;font-size:14px;text-align:left; color: #374151; border: 1px solid #d1d5db;}
 select.qty, select.guests{padding:6px;border-radius:6px;border:1px solid #d1d5db;width:65px; color: #374151; outline:none;}
 select.qty:focus, select.guests:focus{border-color:#3b82f6;}
+=======
+.summary{position:sticky;top:100px;background: var(--card-bg) !important; border: 1px solid var(--border-color) !important; padding:20px;border-radius:10px;}
+.reserve{background: var(--btn-glass-bg) !important; color:var(--btn-glass-text) !important; padding:12px;border:none;width:100%;border-radius:5px;cursor:pointer;}
+.selected-box{background: var(--bg-color) !important; border: 1px solid var(--border-color) !important; padding:10px;border-radius:8px;margin-bottom:10px;font-size:14px;text-align:left;}
+select.qty, select.guests{padding:4px;border-radius:4px;border:1px solid #ccc;width:60px;}
+>>>>>>> dc11e22003aa1e3bff617af62710879c1b6085a5
 .popup{
 display:none;
 position:fixed;

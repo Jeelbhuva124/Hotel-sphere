@@ -114,7 +114,11 @@ if(isset($_POST['login'])){
     }
 </script>
 <script src="https://cdn.tailwindcss.com"></script>
+<<<<<<< HEAD
  <link rel="stylesheet" href="/Hotel-sphere/style.css">
+=======
+ <link rel="stylesheet" href="/HotelManagement/style.css?v=<?php echo time(); ?>">
+>>>>>>> dc11e22003aa1e3bff617af62710879c1b6085a5
 </head>
 
 <body class="bg-gradient-to-r from-indigo-200 to-indigo-50 flex justify-center items-center min-h-screen">
