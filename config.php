@@ -12,4 +12,5 @@ if(!$conn)
 die("Database connection failed");
 }
 
+include_once("alerts_interceptor.php");
 ?>

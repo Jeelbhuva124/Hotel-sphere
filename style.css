@@ -27,7 +27,7 @@
     --glass-text: #1f2937;
     
     /* True Glassmorphic Buttons in Light Mode */
-    --btn-glass-bg: rgba(22, 163, 74, 0.35); /* Perfect semi-transparent green */
+    --btn-glass-bg: linear-gradient(135deg, rgba(22, 163, 74, 0.75), rgba(22, 163, 74, 0.6)); /* Semi-transparent gradient */
     --btn-glass-border: rgba(22, 163, 74, 0.4);
     --btn-glass-border-light: rgba(255, 255, 255, 0.6);
     --btn-glass-text: #ffffff; /* White text looks cleaner on this opacity */
@@ -193,17 +193,22 @@ a[class*="bg-gray-"],
 a[class*="bg-purple-"],
 a[class*="bg-red-"] {
     background: var(--btn-glass-bg) !important;
-    backdrop-filter: blur(10px) !important;
-    -webkit-backdrop-filter: blur(10px) !important;
+    backdrop-filter: blur(12px) saturate(150%) !important;
+    -webkit-backdrop-filter: blur(12px) saturate(150%) !important;
     border: 1px solid var(--btn-glass-border) !important;
     border-top: 1px solid var(--btn-glass-border-light) !important;
     border-left: 1px solid var(--btn-glass-border-light) !important;
     color: var(--btn-glass-text) !important;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    box-shadow: 
+        0 4px 15px rgba(0, 0, 0, 0.1),
+        inset 0 1px 2px rgba(255, 255, 255, 0.5) !important;
     transition: all 0.3s ease !important;
     position: relative;
     overflow: hidden;
     z-index: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .btn-glass:hover,

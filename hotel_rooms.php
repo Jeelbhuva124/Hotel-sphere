@@ -15,9 +15,16 @@ $hotel = mysqli_fetch_assoc($hotel_info);
 <!DOCTYPE html>
 <html>
 <head>
+<script>
+    if (localStorage.getItem('theme') === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+    }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
 <title><?php echo htmlspecialchars($hotel['hotel_name']); ?> - Rooms</title>
+
 <style>
-body{font-family:Arial;background:#f2f2f2;margin:0;}
+body{font-family:'Roboto', sans-serif; background: var(--bg-color) !important; color: var(--text-color) !important; margin:0;}
 .hero{
 position:relative;
 width:100%;
@@ -32,10 +39,10 @@ text-align:center;
 }
 .hero h1{font-size:48px;font-weight:bold;text-shadow:2px 2px 6px rgba(0,0,0,0.7);}
 .main{display:flex;width:95%;margin:auto;gap:20px;flex-wrap:wrap;margin-top:20px;}
-.left{flex:3;min-width:700px;overflow-x:auto;background:white;padding:10px;border-radius:10px;}
+.left{flex:3;min-width:700px;overflow-x:auto;background: var(--card-bg) !important;padding:10px;border-radius:10px;}
 table{width:100%;min-width:900px;border-collapse:collapse;}
-th{background:#4a6fa5;color:white;padding:12px;text-align:center;}
-td{border:1px solid #ddd;padding:12px;text-align:center;vertical-align:middle;}
+th{background: var(--primary-color) !important;color:white;padding:12px;text-align:center;}
+td{border:1px solid var(--border-color) !important;padding:12px;text-align:center;vertical-align:middle;}
 .room img{width:130px;height:90px;object-fit:cover;border-radius:6px;cursor:pointer;}
 .room-title{color:#0071c2;font-size:18px;font-weight:bold;}
 .feature{display:inline-block;border:1px solid #ccc;padding:4px 8px;margin:3px;font-size:12px;border-radius:5px;background:#f1f1f1;}
@@ -45,9 +52,9 @@ td{border:1px solid #ddd;padding:12px;text-align:center;vertical-align:middle;}
 .available.green{color:green;}
 .available.red{color:red;}
 .right{flex:1;min-width:250px;}
-.summary{position:sticky;top:100px;background:#eaf3ff;padding:20px;border-radius:10px;}
-.reserve{background:#0071c2;color:white;padding:12px;border:none;width:100%;border-radius:5px;cursor:pointer;}
-.selected-box{background:white;padding:10px;border-radius:8px;margin-bottom:10px;font-size:14px;text-align:left;}
+.summary{position:sticky;top:100px;background: var(--card-bg) !important; border: 1px solid var(--border-color) !important; padding:20px;border-radius:10px;}
+.reserve{background: var(--btn-glass-bg) !important; color:var(--btn-glass-text) !important; padding:12px;border:none;width:100%;border-radius:5px;cursor:pointer;}
+.selected-box{background: var(--bg-color) !important; border: 1px solid var(--border-color) !important; padding:10px;border-radius:8px;margin-bottom:10px;font-size:14px;text-align:left;}
 select.qty, select.guests{padding:4px;border-radius:4px;border:1px solid #ccc;width:60px;}
 .popup{
 display:none;

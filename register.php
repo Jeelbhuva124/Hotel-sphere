@@ -53,7 +53,7 @@ if(isset($_POST['reg'])){
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
- <link rel="stylesheet" href="/HotelManagement/style.css">
+ <link rel="stylesheet" href="/HotelManagement/style.css?v=<?php echo time(); ?>">
 </head>
 <body class="min-h-screen flex items-center justify-center bg-light">
 
