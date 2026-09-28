@@ -1,0 +1,356 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap');
+
+/* =========================================
+   LIGHT THEME (Default)
+   ========================================= */
+:root {
+    --primary-color: #16a34a;
+    --primary-hover: #15803d;
+    --secondary-color: #3b82f6;
+    --bg-color: #f3f4f6;
+    --text-color: #1f2937;
+    --text-muted: #4b5563;
+    --success-color: #16a34a;
+    --error-color: #dc2626;
+    
+    /* Premium Light Mode Background with Dynamic Glowing Rings */
+    --body-bg-image: 
+        radial-gradient(circle at 10% 80%, transparent 15%, rgba(22, 163, 74, 0.25) 20%, rgba(22, 163, 74, 0.1) 25%, transparent 35%),
+        radial-gradient(circle at 85% 20%, transparent 20%, rgba(22, 163, 74, 0.2) 25%, rgba(22, 163, 74, 0.08) 30%, transparent 45%),
+        radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(22, 163, 74, 0.1) 35%, transparent 45%);
+    
+    /* Premium Light Glassmorphism */
+    --glass-bg: rgba(255, 255, 255, 0.45);
+    --glass-border: rgba(255, 255, 255, 0.5);
+    --glass-border-light: rgba(255, 255, 255, 0.9);
+    --glass-shadow: rgba(0, 0, 0, 0.05);
+    --glass-text: #1f2937;
+    
+    /* True Glassmorphic Buttons in Light Mode */
+    --btn-glass-bg: rgba(22, 163, 74, 0.35); /* Perfect semi-transparent green */
+    --btn-glass-border: rgba(22, 163, 74, 0.4);
+    --btn-glass-border-light: rgba(255, 255, 255, 0.6);
+    --btn-glass-text: #ffffff; /* White text looks cleaner on this opacity */
+    
+    --input-bg: rgba(255, 255, 255, 0.9);
+    --input-border: rgba(0, 0, 0, 0.1);
+}
+
+/* =========================================
+   DARK THEME (Neon Glass)
+   ========================================= */
+[data-theme="dark"] {
+    --primary-color: #3bf366;
+    --primary-hover: #32d659;
+    --secondary-color: #16a34a;
+    --bg-color: #000000;
+    --text-color: #ffffff;
+    --text-muted: #d1d5db;
+    --success-color: #3bf366;
+    --error-color: #ff4c4c;
+    
+    --body-bg-image: 
+        radial-gradient(circle at 10% 80%, transparent 15%, rgba(59, 243, 102, 0.4) 20%, rgba(59, 243, 102, 0.1) 25%, transparent 35%),
+        radial-gradient(circle at 85% 20%, transparent 20%, rgba(59, 243, 102, 0.3) 25%, rgba(59, 243, 102, 0.1) 30%, transparent 45%),
+        radial-gradient(ellipse at 50% 50%, transparent 30%, rgba(59, 243, 102, 0.1) 35%, transparent 45%);
+        
+    --glass-bg: linear-gradient(135deg, rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.4));
+    --glass-border: rgba(255, 255, 255, 0.05);
+    --glass-border-light: rgba(255, 255, 255, 0.2);
+    --glass-shadow: rgba(0, 0, 0, 0.6);
+    --glass-text: #f3f4f6;
+    
+    --btn-glass-bg: rgba(255, 255, 255, 0.05); /* Proper dark frosted glass */
+    --btn-glass-border: rgba(59, 243, 102, 0.3); /* Neon green border */
+    --btn-glass-border-light: rgba(59, 243, 102, 0.6); /* Brighter neon top edge */
+    --btn-glass-text: #3bf366; /* Neon green text */
+    
+    --input-bg: rgba(0, 0, 0, 0.5);
+    --input-border: rgba(255, 255, 255, 0.15);
+}
+
+/* =========================================
+   GLOBAL BODY STYLES
+   ========================================= */
+body, html {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color) !important;
+    color: var(--text-color) !important;
+    margin: 0;
+    min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    
+    /* FIX: Ensure body NEVER acts like a card! */
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+}
+
+body:not(.bg-gray-100), html:not(.bg-gray-100) {
+    background-image: var(--body-bg-image) !important;
+    background-attachment: fixed !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+}
+
+.bg-light {
+    background: transparent !important; 
+    border: none !important; 
+    box-shadow: none !important;
+}
+
+/* =========================================
+   GLASSMORPHISM (Cards, Nav, Footer)
+   ========================================= */
+body:not(.bg-gray-100) header, 
+body:not(.bg-gray-100) nav, 
+body:not(.bg-gray-100) footer, 
+body:not(.bg-gray-100) .card, 
+body:not(.bg-gray-100) .bg-white.rounded-lg, 
+body:not(.bg-gray-100) .bg-white.rounded-xl, 
+body:not(.bg-gray-100) .bg-white.rounded-2xl, 
+body:not(.bg-gray-100) .bg-white.shadow-md, 
+body:not(.bg-gray-100) .bg-white.shadow-lg {
+    background: var(--glass-bg) !important;
+    backdrop-filter: blur(25px) !important;
+    -webkit-backdrop-filter: blur(25px) !important;
+    border: 1px solid var(--glass-border) !important;
+    border-top: 1px solid var(--glass-border-light) !important;
+    border-left: 1px solid var(--glass-border-light) !important;
+    box-shadow: 0 10px 40px 0 var(--glass-shadow) !important;
+    color: var(--glass-text) !important;
+    border-radius: 20px !important;
+    transition: all 0.3s ease;
+}
+
+/* Fix Navbar & Footer so they span full width (Specificity fix) */
+body nav.bg-white, body header.bg-white, body footer.bg-gray-900, nav, header, footer {
+    border-radius: 0 !important;
+    border-left: none !important;
+    border-right: none !important;
+    border-top: none !important;
+}
+footer.bg-gray-900 {
+    border-top: 1px solid var(--glass-border-light) !important;
+}
+
+/* =========================================
+   Text Overrides
+   ========================================= */
+/* ONLY override specific Tailwind text colors. DO NOT override generic h1, h2, p tags so we don't break intended text-white elements! */
+body:not(.bg-gray-100) .text-gray-900, 
+body:not(.bg-gray-100) .text-gray-800, 
+body:not(.bg-gray-100) .text-gray-700, 
+body:not(.bg-gray-100) .text-gray-600, 
+body:not(.bg-gray-100) .text-gray-500, 
+body:not(.bg-gray-100) .text-black {
+    color: var(--text-color) !important;
+}
+body:not(.bg-gray-100) .text-gray-400, 
+body:not(.bg-gray-100) .text-gray-300 {
+    color: var(--text-muted) !important;
+}
+
+/* Ensure links in nav/footer inherit the correct muted color, and turn primary on hover */
+li > a, .nav-link {
+    color: var(--text-muted) !important;
+    transition: color 0.2s ease;
+}
+li > a:hover, .nav-link:hover {
+    color: var(--primary-color) !important;
+}
+
+.text-primary, .text-indigo-600 { color: var(--primary-color) !important; }
+.text-success, .text-green-600 { color: var(--success-color) !important; }
+.text-error, .text-red-600 { color: var(--error-color) !important; }
+
+/* =========================================
+   UTILITY CLASSES (Buttons & Backgrounds)
+   ========================================= */
+.bg-primary {
+    background-color: var(--primary-color) !important;
+}
+.hover\:bg-primary:hover, .bg-primary:hover {
+    background-color: var(--primary-hover) !important;
+}
+.hover\:bg-primary-hover:hover, .bg-primary-hover:hover {
+    background-color: var(--primary-hover) !important;
+}
+
+/* =========================================
+   DYNAMIC GLASS BUTTONS
+   ========================================= */
+.btn-glass,
+button:not(.custom-toggle),
+input[type="submit"],
+input[type="button"],
+a[class*="bg-primary"],
+a[class*="bg-blue-"],
+a[class*="bg-green-"],
+a[class*="bg-gray-"],
+a[class*="bg-purple-"],
+a[class*="bg-red-"] {
+    background: var(--btn-glass-bg) !important;
+    backdrop-filter: blur(10px) !important;
+    -webkit-backdrop-filter: blur(10px) !important;
+    border: 1px solid var(--btn-glass-border) !important;
+    border-top: 1px solid var(--btn-glass-border-light) !important;
+    border-left: 1px solid var(--btn-glass-border-light) !important;
+    color: var(--btn-glass-text) !important;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+    transition: all 0.3s ease !important;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.btn-glass:hover,
+button:not(.custom-toggle):hover,
+input[type="submit"]:hover,
+input[type="button"]:hover,
+a[class*="bg-primary"]:hover,
+a[class*="bg-blue-"]:hover,
+a[class*="bg-green-"]:hover,
+a[class*="bg-gray-"]:hover,
+a[class*="bg-purple-"]:hover,
+a[class*="bg-red-"]:hover {
+    transform: translateY(-2px) !important;
+    box-shadow: 0 8px 25px rgba(22, 163, 74, 0.4) !important;
+    border: 1px solid var(--btn-glass-border-light) !important;
+}
+
+[data-theme="dark"] .btn-glass:hover,
+[data-theme="dark"] button:not(.custom-toggle):hover,
+[data-theme="dark"] input[type="submit"]:hover,
+[data-theme="dark"] input[type="button"]:hover,
+[data-theme="dark"] a[class*="bg-primary"]:hover,
+[data-theme="dark"] a[class*="bg-blue-"]:hover,
+[data-theme="dark"] a[class*="bg-green-"]:hover,
+[data-theme="dark"] a[class*="bg-gray-"]:hover,
+[data-theme="dark"] a[class*="bg-purple-"]:hover,
+[data-theme="dark"] a[class*="bg-red-"]:hover {
+    box-shadow: 0 8px 25px rgba(59, 243, 102, 0.25) !important; /* Neon glow on hover */
+    background: rgba(59, 243, 102, 0.1) !important; /* Slight neon tint on hover */
+}
+
+/* Subtle shine effect */
+.btn-glass::after,
+button:not(.custom-toggle):after,
+input[type="submit"]:after,
+input[type="button"]:after,
+a[class*="bg-primary"]::after,
+a[class*="bg-blue-"]::after,
+a[class*="bg-green-"]::after,
+a[class*="bg-gray-"]::after,
+a[class*="bg-purple-"]::after,
+a[class*="bg-red-"]::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+    transform: skewX(-25deg);
+    transition: all 0.7s ease;
+    z-index: -1;
+}
+
+.btn-glass:hover::after,
+button:not(.custom-toggle):hover::after,
+input[type="submit"]:hover::after,
+input[type="button"]:hover::after,
+a[class*="bg-primary"]:hover::after,
+a[class*="bg-blue-"]:hover::after,
+a[class*="bg-green-"]:hover::after,
+a[class*="bg-gray-"]:hover::after,
+a[class*="bg-purple-"]:hover::after,
+a[class*="bg-red-"]:hover::after {
+    left: 150%;
+}
+
+/* =========================================
+   CUSTOM THEME TOGGLE SWITCH
+   ========================================= */
+.custom-toggle {
+    width: 60px;
+    height: 30px;
+    background: #f1f5f9 !important; /* Light mode track */
+    background-color: #f1f5f9 !important;
+    border: 1px solid #cbd5e1 !important;
+    border-radius: 30px !important;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 2px;
+    margin-left: 1rem;
+    transition: all 0.3s ease;
+    outline: none !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.05) !important;
+}
+.custom-toggle:hover {
+    background: #e2e8f0 !important;
+    background-color: #e2e8f0 !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.1) !important;
+    transform: none !important;
+}
+
+[data-theme="dark"] .custom-toggle {
+    background: #374151 !important; /* Dark mode track */
+    background-color: #374151 !important;
+    border-color: #4b5563 !important;
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.2) !important;
+}
+[data-theme="dark"] .custom-toggle:hover {
+    background: #4b5563 !important;
+    background-color: #4b5563 !important;
+    transform: none !important;
+}
+
+.toggle-thumb {
+    width: 24px;
+    height: 24px;
+    background-color: #1e293b; /* Dark circle in Light mode */
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff; /* White moon */
+    font-size: 11px;
+    transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1), background-color 0.4s ease;
+    transform: translateX(30px); /* Right side (Moon) by default */
+}
+[data-theme="dark"] .toggle-thumb {
+    background-color: #ffffff; /* White circle in Dark mode */
+    color: #1e293b; /* Dark sun */
+    transform: translateX(0); /* Left side (Sun) in Dark mode */
+}
+.toggle-thumb i {
+    transition: opacity 0.3s ease;
+}
+
+/* =========================================
+   TRUE GLASSMORPHISM: Input Fields
+   ========================================= */
+body:not(.bg-gray-100) input, 
+body:not(.bg-gray-100) textarea, 
+body:not(.bg-gray-100) select {
+    background-color: var(--input-bg) !important;
+    border: 1px solid var(--input-border) !important;
+    color: var(--text-color) !important;
+    border-radius: 12px !important;
+    padding: 12px 16px !important;
+    backdrop-filter: blur(5px) !important;
+    transition: all 0.3s ease !important;
+}
+body:not(.bg-gray-100) input:focus, 
+body:not(.bg-gray-100) textarea:focus, 
+body:not(.bg-gray-100) select:focus, 
+body:not(.bg-gray-100) .border-focus:focus {
+    outline: none !important;
+    border-color: var(--primary-color) !important;
+    box-shadow: 0 0 0 2px var(--primary-color) !important;
+}
